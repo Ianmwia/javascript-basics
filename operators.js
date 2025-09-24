@@ -71,3 +71,63 @@ console.log(m);
 //strict comprarison uses 3 equals (===)
 
 // !(NOT)
+
+2 != 3 
+5 !== 4 // strictly not equal
+18 > 20 // greater than
+30 < 20  // less than
+4 >= 4 // greater than or equal to
+5 <= 10
+
+//3. LOGIAL OPERATORS - operation on logic and or not - determination of certain truths, equality or differences
+//Logical And Operator - true if both sides are true (&&)
+
+//isAbove && hasTicket;
+ 3 > 2 && 3 === 3;
+
+ // Logical Or Operator (||)
+ // returns false if all sides are false
+ 5 < 1 || 5 == 4;
+ // or !true
+ console.log(y > z || d == e);
+ console.log(y < z && d > e);
+
+ //TYPE CONVERSION == vs ===
+ //change data types from one version to another
+
+ //implicit type conversion - can lead to bugs
+ let num;
+ num = false +2; // true = 1, false = 0
+
+ console.log(num);
+
+ console.log('5' + 2); // type coersion 52 not 7
+ console.log(typeof('5'));
+
+
+ //Explicit type conversion
+ let res = '43';
+ console.log(typeof(res));
+ res1 = Number(res);
+ console.log(typeof(res1));
+ 
+
+ //methods ends with ()
+
+ let method = true;
+ console.log(typeof(method));
+ 
+ methodToNumber = Number(method);
+ console.log(typeof(methodToNumber));
+ 
+ methodToNumber = String(methodToNumber);
+ console.log(typeof(methodToNumber));
+
+ //
+
+ let day = 22;
+ dayToString = String(day); // type conversion with a method
+
+
+  console.log(typeof(dayToString));
+
