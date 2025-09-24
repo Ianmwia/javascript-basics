@@ -66,3 +66,8 @@ m -= 2; // smame as 15 - 2
 console.log(m); 
 
 //3. COMPARISON OPERATORS - must have two things to compare
+// the result is a boolean
+// loose equality uses 2 equals (==)
+//strict comprarison uses 3 equals (===)
+
+// !(NOT)
