@@ -43,3 +43,63 @@ whoelse1 = (name, age, studying) => {
     console.log(`and I am studying ${studying}`)
 }
 whoelse1('Tokio', 40, 'design');
+
+//return keyword stops a function if you want the function to be reused
+
+function name1(name){
+    //console.log(`hello ${name}`)
+    return `hello ${name}`
+}
+let result = name1('ian');
+console.log(result);
+
+//Function Expressions
+
+const name2 = function (name){
+    //console.log(`hello ${name}`)
+    return `hello ${name}`
+}
+let result2 = name2('You');
+console.log(result2);
+
+//Arrow functions
+name3 = (name) =>{
+    //console.log(`hello ${name}`)
+    return `hello ${name}`
+}
+let result3 = name3('KND Number 3');
+console.log(result3);
+
+name4 = (name, time) => `Welcome Back ${name}, You are ${time} minutes late`
+console.log(name4('Daniel', 20))
+
+//addition
+const add = (num1, num2) => {
+    return num1 + num2
+}
+console.log(add(3,3));
+
+//multiply
+const multiply = (num1, num2) => {
+    return num1 * num2
+}
+console.log(multiply(34, 80));
+
+//divide
+const divide = (num1, num2) => {
+    return num1 / num2
+}
+console.log(divide(1400,15));
+//subtract
+const subtract = (num1, num2) => {
+    return num1 - num2
+}
+console.log(subtract(90,389));
+
+
+// functions with default parameters
+const greet7 = (name = 'userName') => {
+    return `Hello and Welcome ${name}`
+}
+console.log(greet7())
+console.log(greet7('Anne'))
