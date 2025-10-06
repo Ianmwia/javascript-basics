@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //cookies are a part of the BOM broswer Object Model
+        //cookie are a small text file stored in your computer
+        //syntax is name=value
+        //to create a cookie
+        /*
+        function createCookie(name, value){
+            document.cookie = `${name}=${value}`
+
+        }
+        createCookie('name', 'Daniel')
+        createCookie('email', 'daniel@mail.com')
+        console.log(document.cookie)
+        */
+       // creating a cookie
+        function setCookie (name, value, timeInSeconds){
+            document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)};max-age${timeInSeconds}`
+        }
+        setCookie('email', 'daniel@mail.com', 3600)
+        setCookie('name', 'Alex', 3600)
+        setCookie('location', 'Kenya', 3600)
+        console.log(document.cookie)
+
+        //delete cookies
+        function deleteCookie(name){
+            document.cookie = `${encodeURIComponent(name)}=;max-age=0`
+        }
+        deleteCookie('')
+        console.log(document.cookie)
+
+        //Redirection - sending a user from one url to another
+        //syntax window.location
+        //window.location.href = ""
+        //window.location.replace()
+
+    </script>
+</body>
+</html>
