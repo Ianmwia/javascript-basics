@@ -6,7 +6,7 @@ function functionName('parameters,variable, argument, expressions'){
 }
 //call the function or invoke
 */
-function greet(){
+/*function greet(){
     console.log('hi')
 }
 greet();
@@ -103,3 +103,65 @@ const greet7 = (name = 'userName') => {
 }
 console.log(greet7())
 console.log(greet7('Anne'))
+*/
+
+//01102025
+// Scope
+//local scope - variable declared inside a function
+//global scope - variable declared outside a function, available and accessible from everywhere, not recommended in a large program
+// if both exists we will use local variable first
+let globalVar = 'I"m global';
+function showGlobal(){
+    console.log(globalVar)
+}
+showGlobal()
+console.log(globalVar)
+
+let name = 'Global Name'
+
+function introduce(){
+    let name = 'Local Name'
+    console.log(name)
+}
+introduce()
+console.log(name)
+
+//local scope
+function testScope(){
+    let localVar = `i'm local`;
+    console.log(localVar)
+}
+testScope()
+//console.log(localVar) -- will not work 
+
+//block scope - these are variables declred with let and const inside the curly braces {}, var is not block scoped
+
+//lexical scope
+
+let NeighbourHoodLamp = 'street lamp'
+
+function house(){
+    let livingRoomLight = 'livingroom light';
+    function bedroom(){
+        let bedLamp = 'bedside lamp'
+        console.log(NeighbourHoodLamp)
+        console.log(livingRoomLight)
+        console.log(bedLamp)
+
+        
+    }
+    bedroom();
+}
+house()
+function setCookie (name, value, timeInSeconds){
+    document.cookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}; max-age=${timeInSeconds}; path=/`
+}
+setCookie('email', 'alex@mail.com', 3600);
+console.log(document.cookie);
+
+sayHello();
+
+function sayHello(){
+console.log
+(hello)
+}
